@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="440.0" prefWidth="1159.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <ImageView fitHeight="440.0" fitWidth="1159.0" pickOnBounds="true">
+         <image>
+            <Image url="@resources/image.png" />
+         </image>
+      </ImageView>
+      <ListView fx:id="listOfPlanes" layoutX="226.0" layoutY="25.0" opacity="0.71" prefHeight="360.0" prefWidth="900.0" />
+      <Button fx:id="readDB" layoutX="1024.0" layoutY="394.0" mnemonicParsing="false" onAction="#ReadDB" prefHeight="23.0" prefWidth="105.0" text=" Read DB" />
+      <Button fx:id="insertDB" layoutX="897.0" layoutY="394.0" mnemonicParsing="false" onAction="#InsertToDB" prefHeight="25.0" prefWidth="105.0" text="Insert to DB" />
+      <Button fx:id="writeF" layoutX="765.0" layoutY="394.0" mnemonicParsing="false" onAction="#WriteFile" prefHeight="25.0" prefWidth="105.0" text="Write File" />
+      <Button fx:id="readF" layoutX="645.0" layoutY="394.0" mnemonicParsing="false" onAction="#ReadFile" prefHeight="25.0" prefWidth="105.0" text="Read File" />
+      <Button fx:id="createCompany" layoutX="523.0" layoutY="394.0" mnemonicParsing="false" onAction="#CreateCompany" text="Create Company" />
+      <Button fx:id="filter" layoutX="398.0" layoutY="394.0" mnemonicParsing="false" onAction="#Filter" prefHeight="25.0" prefWidth="105.0" text="Filter" />
+      <Button fx:id="insert" layoutX="274.0" layoutY="394.0" mnemonicParsing="false" onAction="#Insert" prefHeight="25.0" prefWidth="105.0" text="Insert Plane" />
+      <Button fx:id="asc" layoutX="28.0" layoutY="394.0" mnemonicParsing="false" onAction="#SortByAsc" prefHeight="25.0" prefWidth="105.0" text="Sort By Asc" />
+      <Button fx:id="desc" layoutX="151.0" layoutY="394.0" mnemonicParsing="false" onAction="#SortByDesc" prefHeight="25.0" prefWidth="105.0" text="Sort By Desc" />
+      <Label fx:id="TotalCarryingCap" layoutX="28.0" layoutY="351.0" text="Total Carrying Capacity: 0" />
+      <Label fx:id="TotalPassengerCap" layoutX="28.0" layoutY="316.0" text="Total Passenger Capacity: 0" />
+      <AnchorPane fx:id="insertNode" disable="true" layoutX="8.0" prefHeight="289.0" prefWidth="176.0" visible="false">
+         <children>
+            <Label layoutX="16.0" layoutY="55.0" prefHeight="36.0" prefWidth="144.0" text="Write your name of model:" />
+            <Label fx:id="flightLabel" layoutX="16.0" layoutY="127.0" prefHeight="36.0" prefWidth="144.0" text="Write your flight range:" />
+            <TextField fx:id="modelField" layoutX="14.0" layoutY="91.0" />
+            <TextField fx:id="rangeField" layoutX="14.0" layoutY="163.0" />
+            <Button fx:id="submit" layoutX="61.0" layoutY="209.0" mnemonicParsing="false" onAction="#submit" text="Submit" />
+            <ChoiceBox fx:id="choiceBox" layoutX="13.0" layoutY="23.0" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="companyName" layoutX="226.0" layoutY="6.0" text="Company Name: None" />
+   </children>
+</AnchorPane>
